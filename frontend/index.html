@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixi + Skia Test</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #efefef;
+    }
+
+    .toolbar {
+      margin-bottom: 16px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .layout {
+      display: flex;
+      gap: 20px;
+    }
+
+    .panel {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    canvas {
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button id="randomShapeBtn">Generate random shape</button>
+    <button id="exportPdfBtn">Export PDF</button>
+  </div>
+
+  <div class="layout">
+    <div class="panel">
+      <h3>Pixi.js</h3>
+      <div id="pixi-root"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Skia</h3>
+      <canvas id="skia-canvas" width="600" height="400"></canvas>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
